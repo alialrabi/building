@@ -1,0 +1,33 @@
+{
+    "buildingsouqApp": {
+        "asset" : {
+            "home": {
+                "title": "Assets",
+                "createLabel": "Create a new Asset",
+                "createOrEditLabel": "Create or edit a Asset",
+                "search": "Search for Asset"
+            },
+            "created": "A new Asset is created with identifier {{ param }}",
+            "updated": "A Asset is updated with identifier {{ param }}",
+            "deleted": "A Asset is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Asset {{ id }}?"
+            },
+            "detail": {
+                "title": "Asset"
+            },
+            "name": "Name",
+            "description": "Description",
+            "telephone": "Telephone",
+            "email": "Email",
+            "details": "Details",
+            "address": "Address",
+            "image": "Image",
+            "map": "Map",
+            "type": "Type",
+            "category": "Category",
+            "location": "Location",
+            "sublocation": "Sublocation"
+        }
+    }
+}

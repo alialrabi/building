@@ -1,0 +1,77 @@
+
+<div *ngIf="asset">
+    <h2><span jhiTranslate="buildingsouqApp.asset.detail.title">Asset</span> {{asset.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="buildingsouqApp.asset.name">Name</span></dt>
+        <dd>
+            <span>{{asset.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="buildingsouqApp.asset.description">Description</span></dt>
+        <dd>
+            <span>{{asset.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="buildingsouqApp.asset.telephone">Telephone</span></dt>
+        <dd>
+            <span>{{asset.telephone}}</span>
+        </dd>
+        <dt><span jhiTranslate="buildingsouqApp.asset.email">Email</span></dt>
+        <dd>
+            <span>{{asset.email}}</span>
+        </dd>
+        <dt><span jhiTranslate="buildingsouqApp.asset.details">Details</span></dt>
+        <dd>
+            <span>{{asset.details}}</span>
+        </dd>
+        <dt><span jhiTranslate="buildingsouqApp.asset.address">Address</span></dt>
+        <dd>
+            <span>{{asset.address}}</span>
+        </dd>
+        <dt><span jhiTranslate="buildingsouqApp.asset.image">Image</span></dt>
+        <dd>
+            <span>{{asset.image}}</span>
+        </dd>
+        <dt><span jhiTranslate="buildingsouqApp.asset.map">Map</span></dt>
+        <dd>
+            <span>{{asset.map}}</span>
+        </dd>
+        <dt><span jhiTranslate="buildingsouqApp.asset.type">Type</span></dt>
+        <dd>
+            <div *ngIf="asset.type">
+                <a [routerLink]="['/type', asset.type?.id]">{{asset.type?.name}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="buildingsouqApp.asset.category">Category</span></dt>
+        <dd>
+            <div *ngIf="asset.category">
+                <a [routerLink]="['/category', asset.category?.id]">{{asset.category?.name}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="buildingsouqApp.asset.location">Location</span></dt>
+        <dd>
+            <div *ngIf="asset.location">
+                <a [routerLink]="['/location', asset.location?.id]">{{asset.location?.name}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="buildingsouqApp.asset.sublocation">Sublocation</span></dt>
+        <dd>
+            <div *ngIf="asset.sublocation">
+                <a [routerLink]="['/sublocation', asset.sublocation?.id]">{{asset.sublocation?.name}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'asset/'+ asset.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

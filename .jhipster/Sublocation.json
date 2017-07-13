@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "location",
+            "otherEntityName": "location",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "sublocation"
+        },
+        {
+            "relationshipName": "asset",
+            "otherEntityName": "asset",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "sublocation"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20170706170000",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "sublocation",
+    "pagination": "pagination"
+}

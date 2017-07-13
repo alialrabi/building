@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "asset",
+            "otherEntityName": "asset",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "type"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20170706165106",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "type",
+    "pagination": "pagination"
+}

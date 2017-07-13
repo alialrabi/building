@@ -1,0 +1,24 @@
+{
+    "buildingsouqApp": {
+        "sublocation" : {
+            "home": {
+                "title": "Sublocations",
+                "createLabel": "Create a new Sublocation",
+                "createOrEditLabel": "Create or edit a Sublocation",
+                "search": "Search for Sublocation"
+            },
+            "created": "A new Sublocation is created with identifier {{ param }}",
+            "updated": "A Sublocation is updated with identifier {{ param }}",
+            "deleted": "A Sublocation is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Sublocation {{ id }}?"
+            },
+            "detail": {
+                "title": "Sublocation"
+            },
+            "name": "Name",
+            "location": "Location",
+            "asset": "Asset"
+        }
+    }
+}

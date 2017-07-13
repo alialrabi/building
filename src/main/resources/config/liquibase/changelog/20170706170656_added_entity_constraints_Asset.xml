@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Asset.
+    -->
+    <changeSet id="20170706170656-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="type_id"
+                                 baseTableName="asset"
+                                 constraintName="fk_asset_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="type"/>
+
+        <addForeignKeyConstraint baseColumnNames="category_id"
+                                 baseTableName="asset"
+                                 constraintName="fk_asset_category_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="category"/>
+
+        <addForeignKeyConstraint baseColumnNames="location_id"
+                                 baseTableName="asset"
+                                 constraintName="fk_asset_location_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="location"/>
+
+        <addForeignKeyConstraint baseColumnNames="sublocation_id"
+                                 baseTableName="asset"
+                                 constraintName="fk_asset_sublocation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sublocation"/>
+
+    </changeSet>
+</databaseChangeLog>
